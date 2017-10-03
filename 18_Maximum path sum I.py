@@ -13,8 +13,10 @@ rows = '''75
  91 71 52 38 17 14 91 43 58 50 27 29 48
  63 66 04 68 89 53 67 30 73 16 69 87 40 31
  04 62 98 27 23 09 70 98 73 93 38 53 60 04 23'''
+
 rows = reversed([map(int,row.split()) for row in rows.split('\n ')])
 totals = None
 for row in rows:
     totals = [value + (max(totals[i], totals[i + 1]) if totals else 0)for i, value in enumerate(row)]
 print (totals)
+    
