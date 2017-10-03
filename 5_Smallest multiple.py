@@ -7,7 +7,7 @@ while True:
         ans = i
         break
     else:
-        i += 380
+        i += 380    #优化后
 print(ans)
 
 t2 = datetime.datetime.now()

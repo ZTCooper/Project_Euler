@@ -6,7 +6,7 @@ def get_divisors(x):
     for i in range(1,int(x**.5+1)):
         if x%i == 0:
             n += 1
-    return n*2
+    return n*2      #*2得到约数个数
 
 a = 1; i = 2
 while True:

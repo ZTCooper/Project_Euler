@@ -28,16 +28,16 @@ for i in range(len(s1)):
     ls.append([int(x) for x in s1[i].split(' ')])
 for i in range(17):
     for j in range(17):
-        ls1.append(ls[i][j]*ls[i+1][j+1]*ls[i+2][j+2]*ls[i+3][j+3])
+        ls1.append(ls[i][j]*ls[i+1][j+1]*ls[i+2][j+2]*ls[i+3][j+3]) #主对角线
 for i in range(17):
     for j in range(3,20):
-        ls1.append(ls[i][j]*ls[i+1][j-1]*ls[i+2][j-2]*ls[i+3][j-3])
+        ls1.append(ls[i][j]*ls[i+1][j-1]*ls[i+2][j-2]*ls[i+3][j-3]) #副对角线
 for i in range(20):
     for j in range(17):
-        ls1.append(ls[i][j]*ls[i][j+1]*ls[i][j+2]*ls[i][j+3])
+        ls1.append(ls[i][j]*ls[i][j+1]*ls[i][j+2]*ls[i][j+3])   #列
 for i in range(17):
     for j in range(20):   
-        ls1.append(ls[i][j]*ls[i+1][j]*ls[i+2][j]*ls[i+3][j])
+        ls1.append(ls[i][j]*ls[i+1][j]*ls[i+2][j]*ls[i+3][j])   #行
 print(max(ls1))
 
 t2 = time.time()
